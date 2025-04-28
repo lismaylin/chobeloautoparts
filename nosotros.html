@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gomas y Auto Parts Chobelo</title>
+    <link rel="icon" href="imagenes/g (2).png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Mantenemos los estilos específicos de la página Nosotros */
+        /* Estilos mejorados para la página Nosotros */
+        .page-header {
+            background-color: #1c2331;
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+            margin-bottom: 70px;
+            position: relative;
+        }
+
+        .page-header:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #ffcd07, #ffeea8, #ffcd07);
+        }
+
+        .page-header h1 {
+            font-size: 5.0rem;
+            margin-bottom: 20px;
+            color: #ffcd07;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 2px;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+
+        .page-header p {
+            font-size: 3.0rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #f5f5f5;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .nosotros-container {
+            padding: 40px 0 100px;
+        }
+
+        .nosotros-section {
+            margin-bottom: 80px;
+            padding: 40px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .nosotros-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .nosotros-section h2 {
+            color: #1c2331;
+            font-size: 3.8rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            padding-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .nosotros-section h2:after {
+            content: '';
+            position: absolute;
+            width: 70%;
+            height: 3px;
+            background-color: #ffcd07;
+            bottom: 0;
+            left: 0;
+        }
+
+        .nosotros-section p {
+            color: #555;
+            margin-bottom: 22px;
+            font-size: 2.8rem;
+            line-height: 1.7;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        /* Estilo para la sección de historia con más espacio */
+        #historia {
+            margin-top: 80px;
+        }
+
+        /* Estilo para la sección de valores con los elementos en línea */
+        .valores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .valor-card {
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .valor-card:hover {
+            background-color: #1c2331;
+            color: white;
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .valor-card h3 {
+            font-size: 3.0rem;
+            margin-bottom: 20px;
+            color: #ffcd07;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .valor-card:hover h3 {
+            color: #ffcd07;
+        }
+
+        .valor-card p {
+            font-size: 2.6rem;
+            margin-bottom: 0;
+            transition: color 0.3s ease;
+        }
+
+        .valor-card:hover p {
+            color: #f5f5f5;
+        }
+
+        @media (max-width: 768px) {
+            .valores-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nosotros-section {
+                padding: 30px 20px;
+            }
+            
+            .nosotros-section h2 {
+                font-size: 3.2rem;
+            }
+            
+            .nosotros-section p {
+                font-size: 2.6rem;
+            }
+            
+            .valor-card h3 {
+                font-size: 2.8rem;
+            }
+            
+            .valor-card p {
+                font-size: 2.4rem;
+            }
+            
+            .page-header h1 {
+                font-size: 4.0rem;
+            }
+            
+            .page-header p {
+                font-size: 2.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="menu container">
+        <div class="logo-container">
+    
+            <input type="checkbox" id="menu" class="menu-checkbox">
+            <label for="menu" class="menu-label">
+                <img src="imagenes/g (2).png" class="menu-icono" alt="Menu">
+            </label>
+        </div>
+        
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="/Index.html">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="/Sucursales.html">Sucursales</a></li>
+                <li><a href="/Contacto.html">Contacto</a></li>
+                <li><a href="/repuestos.html">Repuestos</a></li>
+            </ul>
+        </nav>
+    </div>
+      
+    <div class="header-content container">
+       <h1>GOMAS Y AUTO PARTS CHOBELO</h1>
+       <p>Somos su tienda de confianza para todas sus necesidades de repuestos automotrices. Contamos con una amplia variedad de piezas de calidad para todas las marcas y modelos.</p>
+       <a href="#" class="btn-1">Más Información</a>
+    </div>
+</header>
+
+    <main class="about-page">
+        <section class="page-header">
+            <div class="container">
+                <h1>Quiénes Somos</h1>
+                <p>Conoce la historia, misión, visión y valores que nos definen</p>
+            </div>
+        </section>
+
+        <div class="nosotros-container container">
+            <section id="historia" class="nosotros-section">
+                <h2>Nuestra Historia</h2>
+                <p>Gomas y Auto Parts Chobelo nació en el año 2005 como un pequeño taller familiar en Santo Domingo. Fundada por Juan Chobelo, un apasionado mecánico con más de 25 años de experiencia, nuestra empresa comenzó con el objetivo de brindar servicios de calidad y repuestos confiables para automovilistas.</p>
+                <p>Desde nuestros inicios, nos hemos comprometido a crecer de manera constante, ampliando nuestra gama de productos y servicios. Hoy, somos una empresa líder en la distribución de autopartes y servicios mecánicos en República Dominicana.</p>
+            </section>
+
+            <section id="mision" class="nosotros-section">
+                <h2>Nuestra Misión</h2>
+                <p>Nuestra misión es proporcionar soluciones integrales y de alta calidad en repuestos automotrices, ofreciendo un servicio personalizado que garantice la satisfacción y seguridad de nuestros clientes. Nos dedicamos a ser el aliado confiable de conductores y talleres, facilitando el mantenimiento y reparación de vehículos con productos y asesoramiento de primer nivel.</p>
+            </section>
+
+            <section id="vision" class="nosotros-section">
+                <h2>Nuestra Visión</h2>
+                <p>Ser reconocidos como la empresa líder en distribución de autopartes en República Dominicana, expandiendo nuestra presencia a nivel nacional e internacional. Nos visualizamos como un referente en innovación, calidad de servicio y compromiso con la satisfacción del cliente.</p>
+            </section>
+
+            <section id="valores" class="nosotros-section">
+                <h2>Nuestros Valores Corporativos</h2>
+                <div class="valores-grid">
+                    <div class="valor-card">
+                        <h3>Integridad</h3>
+                        <p>Actuamos con honestidad y transparencia en todas nuestras relaciones comerciales.</p>
+                    </div>
+                    
+                    <div class="valor-card">
+                        <h3>Calidad</h3>
+                        <p>Nos comprometemos a ofrecer productos y servicios de la más alta calidad.</p>
+                    </div>
+                    
+                    <div class="valor-card">
+                        <h3>Innovación</h3>
+                        <p>Buscamos constantemente mejorar y adaptarnos a las nuevas tecnologías automotrices.</p>
+                    </div>
+                    
+                    <div class="valor-card">
+                        <h3>Compromiso</h3>
+                        <p>Nuestra prioridad es la satisfacción y seguridad de nuestros clientes.</p>
+                    </div>
+                    
+                    <div class="valor-card">
+                        <h3>Respeto</h3>
+                        <p>Valoramos a nuestros empleados, clientes y comunidad.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="equipo" class="nosotros-section">
+                <h2>Nuestro Equipo</h2>
+                <p>Contamos con un equipo de profesionales altamente capacitados, con amplia experiencia en el sector automotriz. Desde técnicos especializados hasta asesores de servicio, cada miembro de Chobelo está comprometido con la excelencia y la satisfacción del cliente.</p>
+            </section>
+        </div>
+    </main>
+
+<footer class="footer">
+    <div class="footer-content container">
+        <div class="link">
+            <h3>Empresa</h3>
+            <ul>
+                <li><a href="#">Quiénes Somos</a></li>
+                <li><a href="#">Historia</a></li>
+                <li><a href="#">Misión y Visión</a></li>
+                <li><a href="#">Trabaja con Nosotros</a></li>
+            </ul>
+        </div>
+        
+        <div class="link">
+            <h3>Productos</h3>
+            <ul>
+                <li><a href="#">Gomas</a></li>
+                <li><a href="#">Suspensión</a></li>
+                <li><a href="#">Motores</a></li>
+                <li><a href="#">Accesorios</a></li>
+            </ul>
+        </div>
+
+        <div class="link">
+            <h3>Servicios</h3>
+            <ul>
+                <li><a href="#">Instalación</a></li>
+                <li><a href="#">Asesoría</a></li>
+                <li><a href="#">Diagnóstico</a></li>
+                <li><a href="#">Mantenimiento</a></li>
+            </ul>
+        </div>
+
+        <div class="link">
+            <h3>Contacto</h3>
+            <ul>
+                <li><a href="#">Teléfono</a></li>
+                <li><a href="#">Email</a></li>
+                <li><a href="#">Ubicación</a></li>
+                <li><a href="#">Horarios</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Gomas y Auto Parts Chobelo. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>
