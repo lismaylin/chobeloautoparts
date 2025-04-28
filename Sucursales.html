@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucursales - Gomas y Auto Parts Chobelo</title>
+    <link rel="icon" href="imagenes/g (2).png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .sucursales-container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        .sucursal-section {
+            margin-bottom: 80px;
+            text-align: center;
+        }
+        
+        .sucursal-title {
+            color: #414247;
+            font-size: 32px;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .sucursal-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #CE967B;
+        }
+        
+        .map-container {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            margin: 30px auto;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .map-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .sucursal-info {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .sucursal-info p {
+            margin: 10px 0;
+            color: #555;
+        }
+        
+        .sucursal-info strong {
+            color: #CE967B;
+            font-weight: 600;
+        }
+        
+        .header {
+            min-height: 40vh;
+        }
+    </style>
+</head>
+<body>
+   
+<header class="header">
+    <div class="menu container">
+        <div class="logo-container">
+    
+            <input type="checkbox" id="menu" class="menu-checkbox">
+            <label for="menu" class="menu-label">
+                <img src="imagenes/g (2).png" class="menu-icono" alt="Menu">
+            </label>
+        </div>
+        
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="/Nosotros.html">Nosotros</a></li>
+                <li><a href="/Sucursales.html">Sucursales</a></li>
+                <li><a href="/Contacto.html">Contacto</a></li>
+                <li><a href="/repuestos.html">Repuestos</a></li>
+            </ul>
+        </nav>
+    </div>
+      
+    <div class="header-content container">
+       <h1>GOMAS Y AUTO PARTS CHOBELO</h1>
+       
+    </div>
+</header>
+    <main class="sucursales-container">
+        <div class="sucursal-section">
+            <h2 class="sucursal-title">Sucursal Barahona</h2>
+            <div class="map-container">
+                <iframe
+                  src="https://maps.google.com/maps?q=18.210974267580394,-71.1072396423279&z=15&output=embed"
+                  allowfullscreen
+                  loading="lazy">
+                </iframe>
+            </div>
+            <div class="sucursal-info">
+                <p><strong>Dirección:</strong> Calle Principal #45, Barahona</p>
+                <p><strong>Teléfono:</strong> (809) 123-4567</p>
+                <p><strong>Horario:</strong> Lunes a Viernes 8:00 AM - 6:00 PM | Sábados 8:00 AM - 12:00 PM</p>
+            </div>
+        </div>
+
+        <div class="sucursal-section">
+            <h2 class="sucursal-title">Sucursal Las Matas</h2>
+            <div class="map-container">
+                <iframe
+                  src="https://maps.google.com/maps?q=18.882462084563862,-71.49397820235018&z=15&output=embed"
+                  allowfullscreen
+                  loading="lazy">
+                </iframe>
+            </div>
+            <div class="sucursal-info">
+                <p><strong>Dirección:</strong> Avenida Central #23, Las Matas de Farfán</p>
+                <p><strong>Teléfono:</strong> (809) 234-5678</p>
+                <p><strong>Horario:</strong> Lunes a Viernes 8:00 AM - 6:00 PM | Sábados 8:00 AM - 3:00 PM</p>
+            </div>
+        </div>
+        
+        <div class="sucursal-section">
+            <h2 class="sucursal-title">Sucursal San Juan</h2>
+            <div class="map-container">
+                <iframe
+                  src="https://maps.google.com/maps?q=18.809358197951394,-71.23176477850195&z=15&output=embed"
+                  allowfullscreen
+                  loading="lazy">
+                </iframe>
+            </div>
+            <div class="sucursal-info">
+                <p><strong>Dirección:</strong> Calle Sánchez #78, San Juan de la Maguana</p>
+                <p><strong>Teléfono:</strong> (809) 345-6789</p>
+                <p><strong>Horario:</strong> Lunes a Viernes 8:00 AM - 6:00 PM | Sábados 8:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+
+        <div class="sucursal-section">
+            <h2 class="sucursal-title">Sucursal Azua</h2>
+            <div class="map-container">
+                <iframe
+                  src="https://maps.google.com/maps?q=18.454360899613096,-70.75162711545215&z=15&output=embed"
+                  allowfullscreen
+                  loading="lazy">
+                </iframe>
+            </div>
+            <div class="sucursal-info">
+                <p><strong>Dirección:</strong> Avenida Duarte #112, Azua de Compostela</p>
+                <p><strong>Teléfono:</strong> (809) 456-7890</p>
+                <p><strong>Horario:</strong> Lunes a Viernes 8:00 AM - 6:00 PM | Sábados 8:00 AM - 12:00 PM</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>Empresa</h3>
+                <ul>
+                    <li><a href="/Nosotros.html">Quiénes Somos</a></li>
+                    <li><a href="/Nosotros.html">Historia</a></li>
+                    <li><a href="/Nosotros.html">Misión y Visión</a></li>
+                    <li><a href="#">Trabaja con Nosotros</a></li>
+                </ul>
+            </div>
+            
+            <div class="link">
+                <h3>Productos</h3>
+                <ul>
+                    <li><a href="/repuestos.html">Gomas</a></li>
+                    <li><a href="/repuestos.html">Suspensión</a></li>
+                    <li><a href="/repuestos.html">Motores</a></li>
+                    <li><a href="/repuestos.html">Accesorios</a></li>
+                </ul>
+            </div>
+    
+            <div class="link">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="#">Instalación</a></li>
+                    <li><a href="#">Asesoría</a></li>
+                    <li><a href="#">Diagnóstico</a></li>
+                    <li><a href="#">Mantenimiento</a></li>
+                </ul>
+            </div>
+    
+            <div class="link">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><a href="/Contacto.html">Teléfono</a></li>
+                    <li><a href="/Contacto.html">Email</a></li>
+                    <li><a href="/Sucursales.html">Ubicación</a></li>
+                    <li><a href="/Contacto.html">Horarios</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Gomas y Auto Parts Chobelo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

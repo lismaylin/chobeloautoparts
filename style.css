@@ -1,0 +1,841 @@
+/* Importación de fuentes más elegantes */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Base font size for html - helps with rem calculations */
+html {
+    font-size: 62.5%; /* Cambiado de 70% a 62.5% para base de 10px */
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER - Estilo más elegante */
+.header {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.75), 
+        rgba(0, 0, 0, 0.6)),
+        url(imagenes/foto1.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 40px;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 2.4rem; /* Reducido de 3.6rem */
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.menu .navbar ul {
+    display: flex;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.menu .navbar ul li a {
+    font-size: 1.6rem; /* Reducido de 2.8rem */
+    padding: 15px;
+    color: #ffffff;
+    display: block;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: justify;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.menu .navbar ul li a:hover {
+    color: #ffcd07;
+    transform: translateY(-2px);
+}
+
+/* Menú desplegable con estilo elegante */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(25, 25, 25, 0.95);
+    min-width: 280px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.3);
+    z-index: 1;
+    border-radius: 8px;
+    padding: 15px 0;
+    border: 1px solid rgba(255,255,255,0.1);
+    transform: translateY(10px);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 14px 22px;
+    display: block;
+    text-align: left;
+    font-size: 1.4rem !important; /* Reducido de 2.4rem */
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 205, 7, 0.15);
+    color: #ffcd07;
+    border-left: 3px solid #ffcd07;
+    padding-left: 28px;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 45px;
+    display: none;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.3));
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    text-align: center;
+    padding: 0 30px;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header-content h1 {
+    font-size: 3.6rem; /* Reducido de 5.6rem */
+    line-height: 1.2;
+    color: #ffcd07;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.header-content p {
+    font-size: 1.8rem; /* Reducido de 3.0rem */
+    color: #f5f5f5;
+    margin: 0 auto 50px;
+    text-align: center;
+    max-width: 800px;
+    font-weight: 400;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 15px 40px; /* Reducido de 22px 55px */
+    background-color: #ffcd07;
+    color: #111;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: all 0.4s ease;
+    font-size: 1.4rem; /* Reducido de 2.4rem */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-1:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.btn-1:hover {
+    background-color: #e6ba00;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.btn-1:hover:before {
+    left: 100%;
+}
+
+:root {
+    --primary-color: #1c2331;
+    --secondary-color: #ffcd07;
+    --accent-color: #333;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+}
+
+/* AUTO PART SECTION - Estilo elegante */
+.Auto-Part {
+    padding: 80px 0; /* Reducido de 120px */
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.Auto-Part:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #ffcd07, #ffeea8, #ffcd07);
+}
+
+.auto-part-content {
+    text-align: center;
+    margin-bottom: 50px; /* Reducido de 70px */
+}
+
+.auto-part-content h2 {
+    font-size: 2.8rem; /* Reducido de 4.4rem */
+    color: #222;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    display: inline-block;
+}
+
+.auto-part-content h2:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #ffcd07;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.txt-p {
+    font-size: 1.8rem; /* Reducido de 3.0rem */
+    color: #444;
+    max-width: 900px;
+    margin: 0 auto 40px; /* Reducido el margen inferior de 60px */
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* AUTO PART GROUP - Diseño elegante */
+.Auto-Part-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Reducido de 380px */
+    gap: 30px; /* Reducido de 40px */
+    margin-bottom: 40px; /* Reducido de 60px */
+}
+
+.Auto-Part-1,
+.Auto-Part-2,
+.Auto-Part-3 {
+    background-color: #fff;
+    padding: 20px; /* Reducido de 30px */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+}
+
+.Auto-Part-1:hover,
+.Auto-Part-2:hover,
+.Auto-Part-3:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.Auto-Part-1 img,
+.Auto-Part-2 img,
+.Auto-Part-3 img {
+    width: 100%;
+    height: 250px; /* Reducido de 380px */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Reducido de 25px */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease;
+}
+
+.Auto-Part-1:hover img,
+.Auto-Part-2:hover img,
+.Auto-Part-3:hover img {
+    transform: scale(1.03);
+}
+
+.Auto-Part-1 h3,
+.Auto-Part-2 h3,
+.Auto-Part-3 h3 {
+    font-size: 2.2rem; /* Reducido de 3.4rem */
+    margin-bottom: 15px; /* Reducido de 20px */
+    color: #222;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+
+.Auto-Part-1 p,
+.Auto-Part-2 p,
+.Auto-Part-3 p {
+    font-size: 1.6rem; /* Reducido de 2.6rem */
+    color: #555;
+    line-height: 1.6;
+}
+
+/* SERVICES SECTION - Estilo refinado */
+.services {
+    padding: 80px 0; /* Reducido de 120px */
+    background-color: #fff;
+    position: relative;
+}
+
+.services:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #ffcd07, #ffeea8, #ffcd07);
+}
+
+.services-content {
+    text-align: center;
+}
+
+.services-content h2 {
+    font-size: 2.8rem; /* Reducido de 4.4rem */
+    color: #222;
+    text-transform: uppercase;
+    margin-bottom: 40px; /* Reducido de 50px */
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    display: inline-block;
+}
+
+.services-content h2:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #ffcd07;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.services-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Reducido de 380px */
+    gap: 30px; /* Reducido de 40px */
+    margin-bottom: 40px; /* Reducido de 60px */
+}
+
+.services-1,
+.services-2,
+.services-3 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.services-1 img,
+.services-2 img,
+.services-3 img {
+    width: 100%;
+    height: 250px; /* Reducido de 340px */
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.services-1:hover img,
+.services-2:hover img,
+.services-3:hover img {
+    transform: scale(1.1);
+}
+
+.services-1 h3,
+.services-2 h3,
+.services-3 h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.7), rgba(0,0,0,0));
+    color: #fff;
+    padding: 30px 20px 20px; /* Reducido de 35px 20px 25px */
+    margin: 0;
+    font-size: 2.0rem; /* Reducido de 3.0rem */
+    font-family: 'Playfair Display', serif;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.services-1:hover h3,
+.services-2:hover h3,
+.services-3:hover h3 {
+    transform: translateY(-5px);
+}
+
+.services-content p {
+    font-size: 1.6rem; /* Reducido de 2.6rem */
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 40px; /* Reducido de 50px */
+    line-height: 1.6;
+}
+
+/* GENERAL SECTION - Diseño elegante */
+.general {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.general-1 {
+    padding: 60px; /* Reducido de 90px */
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.general-1:before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 60px; /* Reducido de 70px */
+    background-color: #ffcd07;
+    left: 40px; /* Reducido de 50px */
+    top: 60px; /* Reducido de 90px */
+}
+
+.general-1 h2 {
+    font-size: 2.6rem; /* Reducido de 4.0rem */
+    color: #222;
+    margin-bottom: 20px; /* Reducido de 30px */
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+}
+
+.general-1 p {
+    font-size: 1.6rem; /* Reducido de 2.6rem */
+    color: #555;
+    margin-bottom: 30px; /* Reducido de 40px */
+    line-height: 1.6;
+}
+
+.general-2 {
+    background-image: url(imagenes/foto1.jpeg);
+    background-size: cover;
+    background-position: center;
+    min-height: 400px; /* Reducido de 550px */
+    position: relative;
+}
+
+.general-2:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0));
+}
+
+.general-3 {
+    background-image: url(imagenes/imag2.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 400px; /* Reducido de 550px */
+    position: relative;
+}
+
+.general-3:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to left, rgba(0,0,0,0.3), rgba(0,0,0,0));
+}
+
+/* BLOG SECTION - Estilo refinado */
+.blog {
+    padding: 80px 0; /* Reducido de 120px */
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+}
+
+.blog:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #ffcd07, #ffeea8, #ffcd07);
+}
+
+.blog h2 {
+    font-size: 2.8rem; /* Reducido de 4.4rem */
+    color: #222;
+    text-transform: uppercase;
+    margin-bottom: 20px; /* Reducido de 25px */
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    display: inline-block;
+}
+
+.blog h2:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #ffcd07;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.blog > p {
+    font-size: 1.8rem; /* Reducido de 3.0rem */
+    color: #555;
+    margin-bottom: 40px; /* Reducido de 60px */
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Reducido de 380px */
+    gap: 30px; /* Reducido de 40px */
+    margin-bottom: 40px; /* Reducido de 60px */
+}
+
+.blog-1 {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.blog-1:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.blog-1 img {
+    width: 100%;
+    height: 250px; /* Reducido de 340px */
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-1:hover img {
+    transform: scale(1.05);
+}
+
+.blog-1 h3 {
+    font-size: 2.0rem; /* Reducido de 3.2rem */
+    padding: 20px 20px 10px; /* Reducido de 25px 25px 10px */
+    color: #222;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+
+.blog-1 p {
+    font-size: 1.6rem; /* Reducido de 2.6rem */
+    padding: 10px 20px 25px; /* Reducido de 15px 25px 30px */
+    color: #555;
+    line-height: 1.6;
+}
+
+/* FOOTER - Estilo elegante */
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 60px 0 40px; /* Reducido de 90px 0 60px */
+    position: relative;
+}
+
+.footer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #ffcd07, #ffeea8, #ffcd07);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Reducido de 280px */
+    gap: 40px; /* Reducido de 50px */
+}
+
+.link h3 {
+    font-size: 1.8rem; /* Reducido de 2.8rem */
+    margin-bottom: 20px; /* Reducido de 30px */
+    color: #ffcd07;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    display: inline-block;
+}
+
+.link h3:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #ffcd07;
+    bottom: -10px;
+    left: 0;
+}
+
+.link ul li {
+    margin-bottom: 12px; /* Reducido de 15px */
+}
+
+.link ul li a {
+    color: #C5C5C5;
+    font-size: 1.4rem; /* Reducido de 2.2rem */
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 0;
+}
+
+.link ul li a:before {
+    content: "›";
+    position: absolute;
+    left: -15px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.link ul li a:hover {
+    color: #ffcd07;
+    padding-left: 15px;
+}
+
+.link ul li a:hover:before {
+    opacity: 1;
+    left: 0;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 991px) {
+    .menu {
+        padding: 20px;
+        background: rgba(25, 25, 25, 0.95);
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(25, 25, 25, 0.95);
+        display: none;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .menu .navbar ul {
+        display: block;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* Ajustes para el menú desplegable en móvil */
+    .dropdown-content {
+        position: static;
+        display: none;
+        background-color: rgba(30, 30, 30, 0.95);
+        box-shadow: none;
+        width: 100%;
+        padding: 0;
+        border: none;
+        transform: none;
+    }
+    
+    .dropdown-content a {
+        padding-left: 40px;
+        font-size: 1.5rem !important; /* Reducido de 2.6rem */
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+        animation: fadeInMenu 0.5s ease;
+    }
+
+    @keyframes fadeInMenu {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .header-content h1 {
+        font-size: 2.8rem; /* Reducido de 4.0rem */
+    }
+
+    .header-content p {
+        font-size: 1.6rem; /* Reducido de 2.6rem */
+    }
+
+    .general {
+        grid-template-columns: 1fr;
+    }
+
+    .general-1 {
+        padding: 40px; /* Reducido de 50px */
+    }
+
+    .general-1:before {
+        left: 25px; /* Reducido de 30px */
+        top: 40px; /* Reducido de 50px */
+    }
+
+    .general-2,
+    .general-3 {
+        min-height: 350px; /* Reducido de 450px */
+    }
+    
+    .menu-icono {
+        display: block;
+        width: 40px; /* Reducido de 45px */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2.4rem; /* Reducido de 3.4rem */
+    }
+
+    .Auto-Part-group,
+    .services-group,
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .auto-part-content h2,
+    .services-content h2,
+    .blog h2 {
+        font-size: 2.4rem; /* Reducido de 3.8rem */
+    }
+    
+    .Auto-Part-1 h3,
+    .Auto-Part-2 h3,
+    .Auto-Part-3 h3 {
+        font-size: 2.0rem; /* Reducido de 3.0rem */
+    }
+    
+    .services-1 h3,
+    .services-2 h3,
+    .services-3 h3 {
+        font-size: 1.8rem; /* Reducido de 2.6rem */
+    }
+    
+    .blog-1 h3 {
+        font-size: 1.8rem; /* Reducido de 2.8rem */
+    }
+    
+    .txt-p,
+    .Auto-Part-1 p,
+    .Auto-Part-2 p,
+    .Auto-Part-3 p,
+    .services-content p,
+    .general-1 p,
+    .blog-1 p {
+        font-size: 1.5rem; /* Reducido de 2.4rem */
+    }
+
+    .general-1 {
+        padding: 30px 20px; /* Reducido de 40px 30px */
+    }
+}
